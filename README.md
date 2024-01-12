@@ -5,7 +5,6 @@
 This repo includes:
 - Ingestion in Snowflake from S3 data lake
 - Analytics modeling and tests using dbt
-- Terraform scripts to integrate AWS with Snowflake
 
 
 ### Resources:
