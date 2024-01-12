@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: CORE
+    database: SF_FIRE_INCIDENTS
+    schema: CORE
+    freshness:
+      warn_after: {count: 24, period: hour}
+    tables:
+      - name: SF_FIRE_TB
+        columns:
+          - name: ID
+            tests:
+              - unique
+              - not_null
+          - name: "Incident Number"
+            tests:
+              - unique
+              - not_null
+          - name: "Incident Date"
+            tests:
+              - unique
+              - not_null
