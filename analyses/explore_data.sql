@@ -4,8 +4,11 @@ USE SCHEMA SF_FIRE_INCIDENTS.CORE;
 
 SELECT MIN("Incident Date") FROM SF_FIRE_TB;
 SELECT MAX("Incident Date") FROM SF_FIRE_TB;
+
 SELECT MAX(DATEDIFF(HOUR, "Arrival DtTm", "Alarm DtTm")) as max_wait_period FROM SF_FIRE_TB;
 SELECT MIN(DATEDIFF(MINUTE, "Arrival DtTm", "Alarm DtTm")) as min_wait_period FROM SF_FIRE_TB;
+SELECT MAX(DATEDIFF(HOUR, "Close DtTm", "Arrival DtTm")) as max_action_period FROM SF_FIRE_TB;
+SELECT MIN(DATEDIFF(MINUTE, "Close DtTm", "Arrival DtTm")) as min_action_period FROM SF_FIRE_TB;
 
 SELECT DISTINCT "Battalion" FROM SF_FIRE_TB;
 SELECT DISTINCT "Station Area" FROM SF_FIRE_TB;
