@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fact_fire
+    columns:
+      - name: "Incident Number"
+        tests:
+          - not_null
+  - name: dim_time
+    columns:
+      - name: "Alarm DtTm"
+        tests:
+          - unique
+          - not_null
+  - name: dim_district
+    columns:
+      - name: "point"
+        tests:
+          - unique
+          - not_null
+  - name: dim_battalion
+    columns:
+      - name: "Battalion"
+        tests:
+          - unique
+          - not_null
